@@ -1,0 +1,52 @@
+@import '../../partials/_variables.scss';
+@import '../../partials/_mixins.scss';
+
+.signin {
+  background-color: var(--background-color);
+  @include center;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  @include responsive-text(1.5rem, 2rem);
+  color: var(--text-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+form input, form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+form button {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+
+p {
+  margin-top: 20px;
+  @include responsive-text(0.75rem, 1rem);
+}
+

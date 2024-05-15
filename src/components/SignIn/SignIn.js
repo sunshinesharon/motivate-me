@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/motivatelogo.png'
+import './SignIn.scss'
 
 const SignIn = ({ handleLogin }) => {
     const [formData, setFormData] = useState({
@@ -40,31 +42,31 @@ const SignIn = ({ handleLogin }) => {
     return (
         <div>
             <form onSubmit={handleSignIn}>
-                <div>
-                <label>Email:</label>
+               <img src={logo} alt="Motivate Me Logo" className="logo" />
+               <h1>Sign In</h1>
                 <input
                     type="email"
                     name="email"
                     value={formData.email}
+                    placeholder='Enter your email'
                     onChange={handleChange}
                     required
                 />
-                </div>
-                <div>
-                <label>Password:</label>
                 <input
                     type="password"
                     name="password"
                     value={formData.password}
+                    placeholder='Enter your password'
                     onChange={handleChange}
                     required
                 />
-                </div>
-                <button type="submit">Sign In</button>
+                <button type='submit'>Sign In</button>
+                <p>Forgot Password?</p>
+                <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
             </form>
             
             
-            <Link to="/signup">Sign Up</Link>
+            
         </div>
     );
 };

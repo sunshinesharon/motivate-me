@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/motivatelogo.png'
+import './SignUp.scss'
 
 const SignUp = () => {
     const [formData, setFormData] = useState({
@@ -33,21 +35,22 @@ const SignUp = () => {
       }
     return (
         <div className="signup">
-            <img src={logo} alt="Motivate Me Logo" className="logo" />
+            <img src={logo}  alt="Motivate Me Logo" className="logo" />
             <h1>Sign Up</h1>
             <form onSubmit={handleSubmit}>
                 <input
                 type="text"
                 name="username"
                 value={formData.username}
+                placeholder='Enter your username'
                 onChange={handleChange}
                 required
                 />
-                <label>Email:</label>
                 <input
                 type="email"
                 name="email"
                 value={formData.email}
+                placeholder='Enter your email'
                 onChange={handleChange}
                 required
                 />
@@ -55,12 +58,14 @@ const SignUp = () => {
                 type="password"
                 name="password"
                 value={formData.password}
+                placeholder='Enter your password'
                 onChange={handleChange}
                 required
                 />
                 <button type="submit">Sign Up</button>
+                <p>Already have an account? <Link to="/signin">Sign In</Link></p>
             </form>
-            <p>Already have an account? <Link to="/signin">Sign In</Link></p>
+            
       </div>
     );
 };
