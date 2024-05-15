@@ -7,7 +7,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" component={Welcome} />
+        <Route path="/" element={<Welcome/>} />
       </Routes>
     </Router>
   );
