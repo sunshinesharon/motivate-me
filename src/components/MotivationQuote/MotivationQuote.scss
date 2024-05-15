@@ -1,0 +1,28 @@
+@import '../../partials/_variables.scss';
+@import '../../partials/_mixins.scss';
+
+.quote {
+  background-color: var(--background-color);
+  @include center;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+}
+
+h1 {
+  @include responsive-text(1.5rem, 2rem);
+  color: var (--text-color);
+  margin-bottom: 20px;
+}
+
+.social-share button {
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: var(--font-weight);
+  text-transform: uppercase;
+  @include responsive-text(1rem, 1.5rem);
+}

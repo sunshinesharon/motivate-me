@@ -1,0 +1,50 @@
+@import '../../partials/_variables.scss';
+@import '../../partials/_mixins.scss';
+
+.interests {
+  background-color: var(--background-color);
+  @include center;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+}
+
+h1 {
+  @include responsive-text(1.5rem, 2rem);
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.interest-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.interest-button {
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  font-weight: var(--font-weight);
+  text-transform: none; // Regular text
+  @include responsive-text(1rem, 1.5rem);
+}
+
+.done-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 20px; // More rounded corners
+  cursor: pointer;
+  font-weight: var(--font-weight);
+  text-transform: uppercase;
+  @include responsive-text(1rem, 1.5rem);
+}
